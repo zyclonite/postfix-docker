@@ -17,5 +17,5 @@ VOLUME /etc/postfix
 VOLUME /var/lib/postfix
 VOLUME /var/spool/postfix
 
-ENTRYPOINT [ "/usr/sbin/postfix" ]
+ENTRYPOINT [ "/usr/sbin/postfix", "start-fg"]
 CMD [ "-c", "/etc/postfix" ]
