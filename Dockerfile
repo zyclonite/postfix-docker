@@ -6,7 +6,7 @@ LABEL description "Postfix as Docker Image"
 
 ARG version="3.4.8-r0"
 
-RUN apk add --no-cache --purge --clean-protected -u ca-certificates postfix=$version \
+RUN apk add --no-cache --purge --clean-protected -u ca-certificates cyrus-sasl cyrus-sasl-plain postfix=$version \
  && rm -rf /var/cache/apk/*
 
 ADD main.cf /etc/postfix/
