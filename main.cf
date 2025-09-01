@@ -1,4 +1,4 @@
-compatibility_level = 2
+compatibility_level = 3.6
 queue_directory = /var/spool/postfix
 command_directory = /usr/sbin
 daemon_directory = /usr/libexec/postfix
@@ -22,5 +22,4 @@ smtp_sasl_password_maps = texthash:/etc/postfix/sasl_passwd
 smtp_sasl_security_options = noanonymous
 relayhost = [email-smtp.eu-west-1.amazonaws.com]:587
 smtp_sasl_auth_enable = yes
-smtp_use_tls = yes
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
