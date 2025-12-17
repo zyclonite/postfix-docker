@@ -1,10 +1,10 @@
-FROM alpine:3.22
+FROM alpine:3.23
 
 LABEL maintainer "zyclonite"
-LABEL version "3.10.5"
+LABEL version "3.10.7"
 LABEL description "Postfix as Docker Image"
 
-ARG version="3.10.5-r0"
+ARG version="3.10.7-r0"
 
 RUN apk add --no-cache --purge --clean-protected -u ca-certificates cyrus-sasl postfix=$version postfix-pcre=$version \
  && rm -rf /var/cache/apk/*
